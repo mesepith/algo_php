@@ -16,6 +16,9 @@ class LinkedList {
         $this->head = null;
     }
 
+    /*
+        * Add a node to the beginning of the list
+        */
     public function addFirst($data) {
     
     	echo '<br/><br/>********************************************************** <br/> Data is : ' . $data . '<br/>'; 
@@ -42,6 +45,10 @@ class LinkedList {
         echo ' <br/> !!!!!!!!!!!! $this->head bottom end : <br/>';
         
     }
+
+    /*
+        * Add a node to the end of the list
+        */
     
     public function addLast($data) {
         $node = new Node($data);
@@ -55,6 +62,10 @@ class LinkedList {
         }
         $current->next = $node;
     }
+
+    /*
+        * Insert a node at a specific position
+        */
     
     public function insertNode($data, $position) {
         $newNode = new Node($data);
@@ -96,6 +107,10 @@ class LinkedList {
         $current->next = $newNode;
     }
 
+    /*
+        * view all nodes
+        */
+        
     public function getAll() {
         $data = array();
         $current = $this->head;
